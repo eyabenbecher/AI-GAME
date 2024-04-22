@@ -156,18 +156,15 @@ public class GuardControl : MonoBehaviour
 
     void Chercher()
     {
-        //le garde doit aller au dernier endroit ou le player a été vu et 
-        //il doit patrouiller à cet endroit
-        if (transform.position == dernierEmplacementVu)
+        if (Vector3.Distance(transform.position, dernierEmplacementVu) < 1.0f) // Si le garde est suffisamment proche du dernier emplacement connu
         {
             etatActuel = Etats.Patrouiller;
         }
         else
         {
-            this.GetComponent<UnityEngine.AI.NavMeshAgent>().SetDestination(dernierEmplacementVu);
+            GetComponent<UnityEngine.AI.NavMeshAgent>().SetDestination(dernierEmplacementVu);
             Debug.Log("Etat du Garde: " + etatActuel + " point " + dernierEmplacementVu);
         }
-
     }
 
     void Patrouiller()
