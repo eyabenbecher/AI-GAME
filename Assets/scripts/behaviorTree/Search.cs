@@ -25,12 +25,12 @@ public class Search : ActionNode
     {
         if (Vector3.Distance(guard.transform.position, blackboard.moveToPosition) < 0.5f)
         {
-            return State.Failure;
+            return State.Running;
         }
         else
         {
             agent.SetDestination(blackboard.moveToPosition);
-            return State.Running;
+            return State.Failure;
         }
     }
 }

@@ -1,0 +1,194 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d285eb63c2cdd74180de7cfceaa96ad, type: 3}
+  m_Name: fuire
+  m_EditorClassIdentifier: 
+  rootNode:
+    rid: 4559955728194600960
+  nodes:
+  - rid: 4559955728194600960
+  - rid: 4559955728194600961
+  - rid: 4559955728194600962
+  - rid: 4559955728194600963
+  - rid: 4559955728194600964
+  - rid: 4559955728194600965
+  - rid: 4559955728194600966
+  - rid: 4559955728194600967
+  - rid: 4559955728194600968
+  - rid: 4559955728194600970
+  - rid: 4559955728194600971
+  treeState: 0
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  viewPosition: {x: 513.6, y: 426.4, z: 0}
+  viewScale: {x: 0.65751624, y: 0.65751624, z: 1}
+  references:
+    version: 2
+    RefIds:
+    - rid: 4559955728194600960
+      type: {class: RootNode, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: f06437c1-cddc-4ec2-b71f-f73cc0696283
+        position: {x: -268.8, y: -670.8937}
+        blackboard:
+          moveToPosition: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        child:
+          rid: 4559955728194600961
+    - rid: 4559955728194600961
+      type: {class: Repeat, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 4c58dba714ae5da4d8396e89ea22ec5b
+        position: {x: -268.8, y: -524.78406}
+        blackboard:
+          moveToPosition: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        child:
+          rid: 4559955728194600968
+        restartOnSuccess: 1
+        restartOnFailure: 1
+    - rid: 4559955728194600962
+      type: {class: Parallel, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 3e1a934968e0da44399544fde85f7ad4
+        position: {x: -548.80005, y: -232}
+        blackboard:
+          moveToPosition: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 4559955728194600963
+        - rid: 4559955728194600966
+    - rid: 4559955728194600963
+      type: {class: Inverter, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 4f5cebea85e3a744bacbc4ab27f53197
+        position: {x: -624, y: -55.39447}
+        blackboard:
+          moveToPosition: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        child:
+          rid: 4559955728194600964
+    - rid: 4559955728194600964
+      type: {class: Repeat, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 46f22cf33c1d4f248a52a5692798a8a5
+        position: {x: -624, y: 61.207897}
+        blackboard:
+          moveToPosition: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        child:
+          rid: 4559955728194600965
+        restartOnSuccess: 1
+        restartOnFailure: 0
+    - rid: 4559955728194600965
+      type: {class: CanSee, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 301cd9d0b760b4d43aa1ae995d56ee92
+        position: {x: -624, y: 196.40466}
+        blackboard:
+          moveToPosition: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        player: {fileID: 0}
+        guard: {fileID: 0}
+        guardProp: {fileID: 0}
+        fovDistance: 0
+        fovAngle: 0
+    - rid: 4559955728194600966
+      type: {class: Patrolll, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: a98542f5ee4453d4684adc41e6850dc2
+        position: {x: -435.99683, y: -56.000015}
+        blackboard:
+          moveToPosition: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        patrolInterval: 3
+        patrolDistance: 0
+        guardProp: {fileID: 0}
+    - rid: 4559955728194600967
+      type: {class: Parallel, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 921f52f23fd45f443b11700be7bf44e8
+        position: {x: -76.00002, y: -232}
+        blackboard:
+          moveToPosition: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 4559955728194600970
+    - rid: 4559955728194600968
+      type: {class: Sequencer, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: f19d5566feaee8748a1a5ef2bc1ed765
+        position: {x: -268.80008, y: -382.10382}
+        blackboard:
+          moveToPosition: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 4559955728194600962
+        - rid: 4559955728194600967
+    - rid: 4559955728194600970
+      type: {class: Repeat, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 2be945d23e463ef4e86839f4f4a81549
+        position: {x: -226.40048, y: -99.999985}
+        blackboard:
+          moveToPosition: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        child:
+          rid: 4559955728194600971
+        restartOnSuccess: 1
+        restartOnFailure: 0
+    - rid: 4559955728194600971
+      type: {class: CanSee, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 480102331bb338e4dab3248f4e7eaacb
+        position: {x: -225.60004, y: 28.800056}
+        blackboard:
+          moveToPosition: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        player: {fileID: 0}
+        guard: {fileID: 0}
+        guardProp: {fileID: 0}
+        fovDistance: 0
+        fovAngle: 0

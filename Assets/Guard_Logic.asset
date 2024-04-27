@@ -36,8 +36,8 @@ MonoBehaviour:
   treeState: 0
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-  viewPosition: {x: 450.4, y: 216, z: 0}
-  viewScale: {x: 0.7561437, y: 0.7561437, z: 1}
+  viewPosition: {x: 272.8, y: 173.6, z: 0}
+  viewScale: {x: 0.57175326, y: 0.57175326, z: 1}
   references:
     version: 2
     RefIds:
@@ -60,7 +60,7 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 169458a3be12b9340bfb6e56e9408104
-        position: {x: 16.000011, y: -158.40007}
+        position: {x: 15.199963, y: -158.39995}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
         description: 
@@ -68,7 +68,7 @@ MonoBehaviour:
         child:
           rid: 8907486157889339399
         restartOnSuccess: 1
-        restartOnFailure: 0
+        restartOnFailure: 1
     - rid: 8907486157889339399
       type: {class: Selector, ns: TheKiwiCoder, asm: Assembly-CSharp}
       data:
@@ -104,7 +104,7 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 3c57521a45c559944b63489f2a65f74c
-        position: {x: 16.000008, y: 143.40001}
+        position: {x: 16.799988, y: 143.2}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
         description: 
@@ -132,7 +132,7 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: d8e7f8ba76921ea46b3b8764d0243d20
-        position: {x: -394.99997, y: 252.40002}
+        position: {x: -396.00003, y: 281.60004}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
         description: 
@@ -145,7 +145,7 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 3d88d40aaaec1a9459c05439bb3d3c8b
-        position: {x: -395.99988, y: 370.39996}
+        position: {x: -395.99994, y: 399.99994}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
         description: 
@@ -160,7 +160,7 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: a13931770bdccc0459122dbc27305c3a
-        position: {x: -396, y: 489.4}
+        position: {x: -395.2, y: 521.19995}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
         description: 
@@ -176,7 +176,7 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 8192dc47b4a86a140b9ac882f06360d9
-        position: {x: -226.99998, y: 489.4}
+        position: {x: -226.39998, y: 281.60004}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
         description: 
@@ -190,7 +190,7 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 57c205192b7e5134a81339e0b502fc09
-        position: {x: 516.0001, y: 489.59998}
+        position: {x: 472.19882, y: 311.19998}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
         description: 
@@ -201,7 +201,7 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 427d07b83483d6d49ae510a1b1806c23
-        position: {x: -59.99995, y: 370.40005}
+        position: {x: -59.999844, y: 369.6}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
         description: 
@@ -276,7 +276,7 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 32934b9c700729c4b87d622cc0311e24
-        position: {x: 107.000015, y: 488.4}
+        position: {x: 91.600044, y: 375.19998}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
         description: 
