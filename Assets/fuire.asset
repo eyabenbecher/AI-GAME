@@ -26,10 +26,11 @@ MonoBehaviour:
   - rid: 4559955728194600968
   - rid: 4559955728194600970
   - rid: 4559955728194600971
+  - rid: 8907486333469720576
   treeState: 0
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-  viewPosition: {x: 513.6, y: 426.4, z: 0}
+  viewPosition: {x: 549.6, y: 441.6, z: 0}
   viewScale: {x: 0.65751624, y: 0.65751624, z: 1}
   references:
     version: 2
@@ -147,6 +148,7 @@ MonoBehaviour:
         drawGizmos: 0
         children:
         - rid: 4559955728194600970
+        - rid: 8907486333469720576
     - rid: 4559955728194600968
       type: {class: Sequencer, ns: TheKiwiCoder, asm: Assembly-CSharp}
       data:
@@ -192,3 +194,22 @@ MonoBehaviour:
         guardProp: {fileID: 0}
         fovDistance: 0
         fovAngle: 0
+    - rid: 8907486333469720576
+      type: {class: fuire, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: b69608988b56f494a8550a6f5c23ecef
+        position: {x: -0.7998276, y: -100}
+        blackboard:
+          moveToPosition: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        guardProp: {fileID: 0}
+        baseFleeSpeed: 20
+        fleeRotationSpeed: 10
+        fleeDistanceThreshold: 10
+        dangerDistance: 5
+        dangerFleeSpeedMultiplier: 2
+        safeDistance: 20
+        safeFleeSpeedMultiplier: 0.5

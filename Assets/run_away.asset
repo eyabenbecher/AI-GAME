@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d285eb63c2cdd74180de7cfceaa96ad, type: 3}
-  m_Name: Guard_Logic
+  m_Name: run_away
   m_EditorClassIdentifier: 
   rootNode:
     rid: 8907486157889339396
@@ -20,23 +20,18 @@ MonoBehaviour:
   - rid: 8907486157889339399
   - rid: 8907486157889339400
   - rid: 8907486157889339401
-  - rid: 8907486157889339402
   - rid: 8907486157889339403
   - rid: 8907486157889339404
   - rid: 8907486157889339406
   - rid: 8907486157889339407
-  - rid: 8907486157889339408
   - rid: 8907486157889339409
   - rid: 8907486157889339410
-  - rid: 8907486157889339411
-  - rid: 8907486157889339412
-  - rid: 8907486157889339413
-  - rid: 8907486157889339414
+  - rid: 8907486333469720578
   treeState: 0
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-  viewPosition: {x: 500.8, y: 140.8, z: 0}
-  viewScale: {x: 0.65751624, y: 0.65751624, z: 1}
+  viewPosition: {x: 148.8, y: 46.4, z: 0}
+  viewScale: {x: 0.25, y: 0.25, z: 1}
   references:
     version: 2
     RefIds:
@@ -82,7 +77,6 @@ MonoBehaviour:
         children:
         - rid: 8907486157889339400
         - rid: 8907486157889339401
-        - rid: 8907486157889339402
     - rid: 8907486157889339400
       type: {class: Parallel, ns: TheKiwiCoder, asm: Assembly-CSharp}
       data:
@@ -103,28 +97,14 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 3c57521a45c559944b63489f2a65f74c
-        position: {x: 16.799988, y: 143.2}
+        position: {x: 166.39986, y: 143.20001}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
         children:
         - rid: 8907486157889339409
-        - rid: 8907486157889339414
-    - rid: 8907486157889339402
-      type: {class: Parallel, ns: TheKiwiCoder, asm: Assembly-CSharp}
-      data:
-        state: 0
-        started: 0
-        guid: b12807fe93c2b4d4e848ff2765f7ff5c
-        position: {x: 366.00006, y: 143.40001}
-        blackboard:
-          moveToPosition: {x: 0, y: 0, z: 0}
-        description: 
-        drawGizmos: 0
-        children:
-        - rid: 8907486157889339411
-        - rid: 8907486157889339408
+        - rid: 8907486333469720578
     - rid: 8907486157889339403
       type: {class: Inverter, ns: TheKiwiCoder, asm: Assembly-CSharp}
       data:
@@ -175,7 +155,7 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 8192dc47b4a86a140b9ac882f06360d9
-        position: {x: -226.39998, y: 281.60004}
+        position: {x: -151.20007, y: 306.40002}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
         description: 
@@ -183,24 +163,13 @@ MonoBehaviour:
         patrolInterval: 3
         patrolDistance: 0
         guardProp: {fileID: 0}
-    - rid: 8907486157889339408
-      type: {class: Search, ns: , asm: Assembly-CSharp}
-      data:
-        state: 0
-        started: 0
-        guid: 57c205192b7e5134a81339e0b502fc09
-        position: {x: 472.19882, y: 311.19998}
-        blackboard:
-          moveToPosition: {x: 0, y: 0, z: 0}
-        description: 
-        drawGizmos: 0
     - rid: 8907486157889339409
       type: {class: Repeat, ns: TheKiwiCoder, asm: Assembly-CSharp}
       data:
         state: 0
         started: 0
         guid: 427d07b83483d6d49ae510a1b1806c23
-        position: {x: -59.999844, y: 369.6}
+        position: {x: 89.6001, y: 362}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
         description: 
@@ -215,7 +184,7 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 1faea4e1b86e960408d8ad13bab13b30
-        position: {x: -59.99995, y: 489.4}
+        position: {x: 89.6001, y: 482}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
         description: 
@@ -225,62 +194,18 @@ MonoBehaviour:
         guardProp: {fileID: 0}
         fovDistance: 10
         fovAngle: 45
-    - rid: 8907486157889339411
-      type: {class: Inverter, ns: TheKiwiCoder, asm: Assembly-CSharp}
+    - rid: 8907486333469720578
+      type: {class: fuire, ns: , asm: Assembly-CSharp}
       data:
         state: 0
         started: 0
-        guid: 75cc9063db3bab94a97e1e02eefff34a
-        position: {x: 267.99997, y: 281.59995}
-        blackboard:
-          moveToPosition: {x: 0, y: 0, z: 0}
-        description: 
-        drawGizmos: 0
-        child:
-          rid: 8907486157889339412
-    - rid: 8907486157889339412
-      type: {class: Repeat, ns: TheKiwiCoder, asm: Assembly-CSharp}
-      data:
-        state: 0
-        started: 0
-        guid: dbd2aace08c54984d87bf6dd84159187
-        position: {x: 267.99994, y: 375.20007}
-        blackboard:
-          moveToPosition: {x: 0, y: 0, z: 0}
-        description: 
-        drawGizmos: 0
-        child:
-          rid: 8907486157889339413
-        restartOnSuccess: 0
-        restartOnFailure: 1
-    - rid: 8907486157889339413
-      type: {class: CanSee, ns: , asm: Assembly-CSharp}
-      data:
-        state: 0
-        started: 0
-        guid: 9864b5e241bdeba4fbb1bf0c691401a9
-        position: {x: 268.00003, y: 489.4}
-        blackboard:
-          moveToPosition: {x: 0, y: 0, z: 0}
-        description: 
-        drawGizmos: 0
-        player: {fileID: 0}
-        guard: {fileID: 0}
-        guardProp: {fileID: 0}
-        fovDistance: 10
-        fovAngle: 45
-    - rid: 8907486157889339414
-      type: {class: Chaser1, ns: , asm: Assembly-CSharp}
-      data:
-        state: 0
-        started: 0
-        guid: 32934b9c700729c4b87d622cc0311e24
-        position: {x: 91.600044, y: 375.19998}
+        guid: b4b96f384c27d054b801d84e140a9194
+        position: {x: 393.6001, y: 342.40002}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
         guardProp: {fileID: 0}
-        vitesse_poursuite: 5
-        vitesseRot_poursuite: 5
-        precision_poursuite: 1
+        vitesse_poursuite: 0
+        vitesseRot_poursuite: 0
+        precision_poursuite: 0
