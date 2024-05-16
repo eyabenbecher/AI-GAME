@@ -37,7 +37,7 @@ public class Hide1 : ActionNode
         MoveToHidePosition();
 
         // If the guard has reached the hiding spot, consider it a success
-        if (Vector3.Distance(context.transform.position, hidePosition) < 1f)
+        if (Vector3.Distance(context.transform.position, hidePosition) < 0.5f)
         {
             return State.Success;
         }
