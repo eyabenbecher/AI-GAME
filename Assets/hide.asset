@@ -19,22 +19,35 @@ MonoBehaviour:
   - rid: 8907486157889339398
   - rid: 8907486157889339399
   - rid: 8907486157889339400
-  - rid: 8907486157889339401
   - rid: 8907486157889339403
   - rid: 8907486157889339404
   - rid: 8907486157889339406
   - rid: 8907486157889339407
-  - rid: 8907486157889339409
-  - rid: 8907486157889339410
   - rid: 8907486336423297025
+  - rid: 930917311115952143
   treeState: 0
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-  viewPosition: {x: 356.8, y: 232, z: 0}
-  viewScale: {x: 0.57175326, y: 0.57175326, z: 1}
+  viewPosition: {x: 232.8, y: 112, z: 0}
+  viewScale: {x: 0.49717674, y: 0.49717674, z: 1}
   references:
     version: 2
     RefIds:
+    - rid: 930917311115952143
+      type: {class: Repeat, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 293ca1b97330bf84c86b62480e302342
+        position: {x: 165.60004, y: 143.2}
+        blackboard:
+          moveToPosition: {x: 0, y: 0, z: 0}
+        description: 
+        drawGizmos: 0
+        child:
+          rid: 8907486336423297025
+        restartOnSuccess: 0
+        restartOnFailure: 1
     - rid: 8907486157889339396
       type: {class: RootNode, ns: TheKiwiCoder, asm: Assembly-CSharp}
       data:
@@ -76,7 +89,7 @@ MonoBehaviour:
         drawGizmos: 1
         children:
         - rid: 8907486157889339400
-        - rid: 8907486157889339401
+        - rid: 930917311115952143
     - rid: 8907486157889339400
       type: {class: Parallel, ns: TheKiwiCoder, asm: Assembly-CSharp}
       data:
@@ -91,20 +104,6 @@ MonoBehaviour:
         children:
         - rid: 8907486157889339403
         - rid: 8907486157889339407
-    - rid: 8907486157889339401
-      type: {class: Parallel, ns: TheKiwiCoder, asm: Assembly-CSharp}
-      data:
-        state: 0
-        started: 0
-        guid: 3c57521a45c559944b63489f2a65f74c
-        position: {x: 16.799988, y: 143.2}
-        blackboard:
-          moveToPosition: {x: 0, y: 0, z: 0}
-        description: 
-        drawGizmos: 0
-        children:
-        - rid: 8907486157889339409
-        - rid: 8907486336423297025
     - rid: 8907486157889339403
       type: {class: Inverter, ns: TheKiwiCoder, asm: Assembly-CSharp}
       data:
@@ -163,50 +162,16 @@ MonoBehaviour:
         patrolInterval: 3
         patrolDistance: 0
         guardProp: {fileID: 0}
-    - rid: 8907486157889339409
-      type: {class: Repeat, ns: TheKiwiCoder, asm: Assembly-CSharp}
-      data:
-        state: 0
-        started: 0
-        guid: 427d07b83483d6d49ae510a1b1806c23
-        position: {x: -59.999844, y: 369.6}
-        blackboard:
-          moveToPosition: {x: 0, y: 0, z: 0}
-        description: 
-        drawGizmos: 0
-        child:
-          rid: 8907486157889339410
-        restartOnSuccess: 1
-        restartOnFailure: 0
-    - rid: 8907486157889339410
-      type: {class: CanSee, ns: , asm: Assembly-CSharp}
-      data:
-        state: 0
-        started: 0
-        guid: 1faea4e1b86e960408d8ad13bab13b30
-        position: {x: -59.99995, y: 489.4}
-        blackboard:
-          moveToPosition: {x: 0, y: 0, z: 0}
-        description: 
-        drawGizmos: 0
-        player: {fileID: 0}
-        guard: {fileID: 0}
-        guardProp: {fileID: 0}
-        fovDistance: 10
-        fovAngle: 45
     - rid: 8907486336423297025
       type: {class: Hide1, ns: , asm: Assembly-CSharp}
       data:
         state: 0
         started: 0
         guid: d7225df4e60af0e439eb59ad6c1e548d
-        position: {x: 166.3999, y: 367.59998}
+        position: {x: 165.60004, y: 281.6}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
         description: 
-        drawGizmos: 0
-        obstacleMask:
-          serializedVersion: 2
-          m_Bits: 0
-        searchRadius: 10
+        drawGizmos: 1
+        targetHidingSpot: {fileID: 5114635456658597049, guid: e85d5400e6783d448a6ccebd59e2fe20, type: 3}
         hideSpeed: 5
