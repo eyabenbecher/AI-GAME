@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
 {
     public float speed = 10f;
     public float rotateSpeed = 10f;
-
+    public float Health =100;
     private void Update()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
