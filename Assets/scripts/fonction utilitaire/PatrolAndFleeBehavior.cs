@@ -44,7 +44,7 @@ public class PatrolAndFleeBehavior : MonoBehaviour
 
     private float CalculateAnxiety(float distance)
     {
-        // Use a curve to calculate anxiety based on distance
+        
         float anxiety = Mathf.Pow(50f - distance, 3) / Mathf.Pow(distance, 3);
         anxiety = Mathf.Clamp01(anxiety);
         return anxiety;
