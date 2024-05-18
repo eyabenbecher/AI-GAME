@@ -39,8 +39,8 @@ MonoBehaviour:
   treeState: 0
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
-  viewPosition: {x: 144.8, y: -4, z: 0}
-  viewScale: {x: 0.375937, y: 0.375937, z: 1}
+  viewPosition: {x: 150.4, y: 69.6, z: 0}
+  viewScale: {x: 0.25, y: 0.25, z: 1}
   references:
     version: 2
     RefIds:
@@ -91,7 +91,7 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: d54efe580f931af43be72ab34159ad5a
-        position: {x: 244.00006, y: 795.3643}
+        position: {x: 243.99988, y: 838.848}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
         description: 
@@ -100,7 +100,7 @@ MonoBehaviour:
         guard: {fileID: 0}
         guardProp: {fileID: 0}
         fovDistance: 10
-        fovAngle: 45
+        fovAngle: 360
     - rid: 479549110993027079
       type: {class: Repeat, ns: TheKiwiCoder, asm: Assembly-CSharp}
       data:
@@ -127,13 +127,8 @@ MonoBehaviour:
           moveToPosition: {x: 0, y: 0, z: 0}
         description: 
         drawGizmos: 0
-        player: {fileID: 0}
-        spawnPoint: {fileID: 0}
-        bullet: {fileID: 0}
-        bulletSpeed: 20
-        timeBetweenAttacks: 1
-        shootingInterval: 1
-        maxBulletsPerReload: 5
+        playerTag: Player
+        damageAmount: 10
     - rid: 479549110993027081
       type: {class: Parallel, ns: TheKiwiCoder, asm: Assembly-CSharp}
       data:
@@ -154,7 +149,7 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 712373c6d2e63004faa7d74252b77030
-        position: {x: 742.4001, y: 496.80002}
+        position: {x: 751.19995, y: 578.39996}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
         description: 
@@ -169,7 +164,7 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 5109afd0535e0be4b9ab53d2b1853ade
-        position: {x: 742.00006, y: 610.39996}
+        position: {x: 751.1741, y: 675.2}
         blackboard:
           moveToPosition: {x: 0, y: 0, z: 0}
         description: 
@@ -346,5 +341,5 @@ MonoBehaviour:
         description: 
         drawGizmos: 1
         targetHidingSpot: {fileID: 3741047543455571013, guid: 3119f596a52e84849a3d31c9c2c8f2f7, type: 3}
-        stoppingDistance: 0.5
-        hideSpeed: 25
+        stoppingDistance: 3
+        hideSpeed: 20

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -39,6 +40,13 @@ public class Test : MonoBehaviour
     private bool isHealing = false; // Whether the unit is currently healing
     private float lastShootTime;
     private int bulletsShot;
+
+    [Header("MA Logic")]
+    // Variables for MA logic
+    public float necessityOfReloading;
+    public float necessityOfHealing;
+    public float threatLevel;
+    public float threshold = 0.5f; // Threshold for deciding to take cover
 
     private void Start()
     {
@@ -146,11 +154,11 @@ public class Test : MonoBehaviour
         return anxiety;
     }
 
-    private bool ShouldFlee(float anxiety)
-    {
-        float fleeProbability = Mathf.Clamp01(1 - Mathf.Pow(1 - anxiety, 2));
-        return Random.value < fleeProbability;
-    }
+    //private bool ShouldFlee(float anxiety)
+    //{
+    //    float fleeProbability = Mathf.Clamp01(1 - Mathf.Pow(1 - anxiety, 2));
+    //    return Random.value < fleeProbability;
+    //}
 
     private void Patrol()
     {
@@ -227,29 +235,49 @@ public class Test : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, fleeDistance);
     }
 
-    private void AttackPlayer()
-    {
-        // Make sure enemy doesn't move
-        navMeshAgent.SetDestination(transform.position);
-        transform.LookAt(player);
+    //private void AttackPlayer()
+    //{
+    //    // Make sure enemy doesn't move
+    //    navMeshAgent.SetDestination(transform.position);
+    //    transform.LookAt(player);
 
-        if (!alreadyAttacked)
-        {
-            // Attack code here
-            Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            rb.AddForce(transform.up * 8f, ForceMode.Impulse);
+    //    if (!alreadyAttacked)
+    //    {
+    //        // Attack code here
+    //        Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+    //        rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
+    //        rb.AddForce(transform.up * 8f, ForceMode.Impulse);
 
-            alreadyAttacked = true;
-            Invoke(nameof(ResetAttack), 12);
-        }
-    }
+    //        alreadyAttacked = true;
+    //        Invoke(nameof(ResetAttack), 12);
+    //    }
+    //}
 
     private IEnumerator FireBalls()
     {
         while (playerInAttackRange)
         {
-            FireBall();
+            // Update necessity variables
+            UpdateNecessityVariables();
+
+            // Calculate the necessity of taking cover
+            float MA = CalculateNecessityOfTakingCover();
+
+            // Use MA for decision-making (e.g., deciding whether to take cover)
+            if (MA > threshold)
+            {
+                Debug.Log("Taking cover");
+                // Take cover
+                Flee();
+                yield break;
+            }
+            else
+            {
+                Debug.Log("Not taking cover");
+                // Proceed with attack
+                FireBall();
+            }
+
             yield return new WaitForSeconds(timeBetweenAttacks);
         }
     }
@@ -294,6 +322,29 @@ public class Test : MonoBehaviour
 
             Destroy(rb.gameObject, 5f);
         }
+    }
+
+
+    private void UpdateNecessityVariables()
+    {
+        // Update necessity of reloading, healing, and threat level based on game state
+        // For demonstration purposes, let's assume they are already updated elsewhere in the code
+        necessityOfReloading = CalculateAmmoAnxiety(bulletsShot - 12);
+        necessityOfHealing = CalculateHealthAnxiety(unit.GetHealthPercentage() * 100);
+        threatLevel = CalculateAnxiety(Vector3.Distance(transform.position, player.position));
+    }
+
+    private float CalculateNecessityOfTakingCover()
+    {
+        // Define the formula parameters
+        float a = 0.2f;
+        float b = 1.5f;
+        float c = 1.3f;
+
+        // Calculate MA using the provided formula
+        float MA = (a +  necessityOfReloading  + b *  necessityOfHealing) *(threatLevel *c);
+
+        return MA;
     }
 
     private IEnumerator Reload()
